@@ -1405,4 +1405,9 @@ body.signup-page-body {
     border: none !important;
 }
 
+#sidebar-collapse-toggle:hover {
+    background-color: var(--primary-color) !important;
+    color: #FFFFFF !important;
+}
+
 
