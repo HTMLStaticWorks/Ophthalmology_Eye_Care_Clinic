@@ -1312,3 +1312,21 @@ textarea.form-control-custom {
     color: #111111 !important; /* Pure high contrast text */
 }
 
+/* About page collage grid on mobile screens to prevent overlapping */
+@media (max-width: 767.98px) {
+    .about-collage-container {
+        height: auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        position: static !important;
+    }
+    .about-collage-container img {
+        position: static !important;
+        width: 100% !important;
+        height: 140px !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
