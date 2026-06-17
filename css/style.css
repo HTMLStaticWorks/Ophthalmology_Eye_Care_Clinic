@@ -940,6 +940,10 @@ textarea.form-control-custom {
         right: 21px;
         left: auto;
     }
+    [dir="rtl"] .modern-timeline::after {
+        left: auto;
+        right: 31px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1176,4 +1180,27 @@ textarea.form-control-custom {
 [data-theme="dark"] .booking-card input::placeholder {
     color: #6C757D !important;
     opacity: 0.7 !important;
+}
+
+/* Legible Accordion Collapse Arrows in Dark Mode */
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) !important;
+}
+
+/* Mobile Horizontal Scroll Utility */
+@media (max-width: 767.98px) {
+    .mobile-horizontal-scroll {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: 20px !important;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+    }
+    .mobile-horizontal-scroll > [class*="col-"] {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: center;
+    }
 }
