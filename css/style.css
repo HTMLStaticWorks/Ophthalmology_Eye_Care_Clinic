@@ -1090,3 +1090,14 @@ textarea.form-control-custom {
     color: var(--secondary-color) !important;
     background-color: var(--badge-bg) !important;
 }
+
+/* Legible Input Placeholder Styles */
+::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.6;
+}
+
+[data-theme="dark"] ::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1 !important;
+}
