@@ -1312,3 +1312,11 @@ textarea.form-control-custom {
     color: #111111 !important; /* Pure high contrast text */
 }
 
+/* Keep affiliation badges and text centered in all states and directions */
+.research-publications-section .row.mt-5,
+.research-publications-section .row.mt-5 .col-12,
+.research-publications-section .row.mt-5 p,
+.research-publications-section .row.mt-5 .d-flex {
+    text-align: center !important;
+    justify-content: center !important;
+}

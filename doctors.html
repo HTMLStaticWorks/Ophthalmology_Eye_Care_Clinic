@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VisionNest - Team & Doctors</title>
     <!-- Bootstrap CSS (ID dynamic loader) -->
-    <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link id="bootstrap-link" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <!-- AOS Scroll Animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- Custom Premium CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="IMAGE/favicon.svg">
-    
+
     <!-- Inline script to prevent theme/RTL flash -->
     <script>
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme') || 'light';
             const dir = localStorage.getItem('dir') || 'ltr';
             document.documentElement.setAttribute('data-theme', theme);
             document.documentElement.setAttribute('dir', dir);
             document.documentElement.setAttribute('lang', dir === 'rtl' ? 'ar' : 'en');
-            
+
             const bootstrapLink = document.getElementById('bootstrap-link');
             if (bootstrapLink) {
-                bootstrapLink.href = dir === 'rtl' 
-                    ? 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css' 
+                bootstrapLink.href = dir === 'rtl'
+                    ? 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css'
                     : 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
             }
         })();
-    
 
-        window.handleImageError = function(imgElement, type) {
+
+        window.handleImageError = function (imgElement, type) {
             if (imgElement.dataset.fallbackTriggered) return;
             imgElement.dataset.fallbackTriggered = "true";
             const fallbacks = {
@@ -40,7 +42,7 @@
                 eye: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80"
             };
             imgElement.src = fallbacks[type] || fallbacks.eye;
-            imgElement.onerror = function() {
+            imgElement.onerror = function () {
                 const container = document.createElement('div');
                 container.className = imgElement.className + " d-flex flex-column align-items-center justify-content-center text-center p-3";
                 container.style.width = imgElement.style.width || (imgElement.width ? imgElement.width + 'px' : '100%');
@@ -64,6 +66,7 @@
 
     </script>
 </head>
+
 <body>
 
     <!-- STICKY NAVBAR -->
@@ -160,15 +163,17 @@
     </div>
 
     <!-- HERO SECTION -->
-    <section class="hero-section text-center" style="--hero-bg-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&q=80');">
+    <section class="hero-section text-center"
+        style="--hero-bg-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&q=80');">
         <div class="hero-bg-shapes">
             <div class="hero-shape shape-2"></div>
         </div>
         <div class="container hero-content">
             <span class="hero-badge"><i data-lucide="users"></i> Expert Board-Certified Ophthalmology Team</span>
             <h1 class="hero-title text-center text-color">Our Elite Medical Specialists</h1>
-            <p class="hero-subtitle text-center text-muted">Leveraging years of combined clinical research and patented surgeries to safeguard your vision acuity.</p>
-            
+            <p class="hero-subtitle text-center text-muted">Leveraging years of combined clinical research and patented
+                surgeries to safeguard your vision acuity.</p>
+
             <div class="centered-btn-wrapper">
                 <a href="#lead" class="btn-primary-custom">Meet Team</a>
             </div>
@@ -185,24 +190,34 @@
                     <div class="glass-panel p-5">
                         <div class="row align-items-center g-4">
                             <div class="col-md-5">
-                                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" onerror="handleImageError(this, 'doctor')" alt="Dr. Michael Vance" class="img-fluid rounded-4 shadow-sm" style="height: 340px; object-fit: cover; width: 100%;" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
+                                    onerror="handleImageError(this, 'doctor')" alt="Dr. Michael Vance"
+                                    class="img-fluid rounded-4 shadow-sm"
+                                    style="height: 340px; object-fit: cover; width: 100%;" loading="lazy">
                             </div>
                             <div class="col-md-7">
                                 <span class="badge bg-primary-color text-white mb-2">Lead Surgeon & Director</span>
-                                <h3 class="text-color" style="text-align: inherit; margin-bottom: 8px;">Dr. Michael Vance, MD, PhD</h3>
-                                <p class="text-secondary-color fw-bold small mb-3">18 Years Experience | English, German, French</p>
-                                <p class="text-muted">Specializes in advanced micro-incision cataract extractions and custom robotic laser corrections. Board Director at regional ophthalmic foundations.</p>
-                                
+                                <h3 class="text-color" style="text-align: inherit; margin-bottom: 8px;">Dr. Michael
+                                    Vance, MD, PhD</h3>
+                                <p class="text-secondary-color fw-bold small mb-3">18 Years Experience | English,
+                                    German, French</p>
+                                <p class="text-muted">Specializes in advanced micro-incision cataract extractions and
+                                    custom robotic laser corrections. Board Director at regional ophthalmic foundations.
+                                </p>
+
                                 <div class="mb-4">
                                     <h6 class="text-color fw-bold mb-2">Key Certifications:</h6>
                                     <ul class="list-unstyled text-muted small">
-                                        <li><i data-lucide="award" class="text-secondary-color me-2 icon-size-sm"></i> Board Certified in Refractive Laser Surgery</li>
-                                        <li><i data-lucide="award" class="text-secondary-color me-2 icon-size-sm"></i> Fellow of American Academy of Ophthalmology</li>
+                                        <li><i data-lucide="award" class="text-secondary-color me-2 icon-size-sm"></i>
+                                            Board Certified in Refractive Laser Surgery</li>
+                                        <li><i data-lucide="award" class="text-secondary-color me-2 icon-size-sm"></i>
+                                            Fellow of American Academy of Ophthalmology</li>
                                     </ul>
                                 </div>
 
                                 <div class="text-start">
-                                    <a href="dashboard.html" class="btn-primary-custom text-center" style="height: 48px; border-radius: 24px;">Book Appointment</a>
+                                    <a href="dashboard.html" class="btn-primary-custom text-center"
+                                        style="height: 48px; border-radius: 24px;">Book Appointment</a>
                                 </div>
                             </div>
                         </div>
@@ -217,47 +232,62 @@
         <div class="container">
             <span class="section-tag d-block text-center">Expert Partners</span>
             <h2 class="section-title text-center text-color">Senior Specialists</h2>
-            
+
             <div class="masonry-grid" data-aos="fade-up">
-                
+
                 <!-- Dr. Sarah Jenkins -->
                 <div class="doctor-profile-card">
-                    <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&w=600&q=80" onerror="handleImageError(this, 'doctor')" alt="Dr. Sarah Jenkins" class="doctor-profile-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&w=600&q=80"
+                        onerror="handleImageError(this, 'doctor')" alt="Dr. Sarah Jenkins" class="doctor-profile-img"
+                        loading="lazy">
                     <div class="doctor-profile-overlay">
-                        <span class="badge bg-secondary-color text-white mb-2" style="width: fit-content;">Retina Expert</span>
+                        <span class="badge bg-secondary-color text-white mb-2" style="width: fit-content;">Retina
+                            Expert</span>
                         <h4 class="mb-0 text-white">Dr. Sarah Jenkins, MD</h4>
                         <p class="mb-0 text-white-50">14 Years Experience | Eng, Span</p>
                         <div class="doctor-profile-details">
-                            <p class="text-white-50 small mb-2">Certifications: European Board of Ophthalmology, Macular Society Fellow.</p>
-                            <a href="dashboard.html" class="btn-primary-custom w-100 text-center" style="height: 44px; font-size: 0.85rem; border-radius: 22px;">Book Consultation</a>
+                            <p class="text-white-50 small mb-2">Certifications: European Board of Ophthalmology, Macular
+                                Society Fellow.</p>
+                            <a href="dashboard.html" class="btn-primary-custom w-100 text-center"
+                                style="height: 44px; font-size: 0.85rem; border-radius: 22px;">Book Consultation</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Dr. Fiona Calloway -->
                 <div class="doctor-profile-card">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" onerror="handleImageError(this, 'doctor')" alt="Dr. Fiona Calloway" class="doctor-profile-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
+                        onerror="handleImageError(this, 'doctor')" alt="Dr. Fiona Calloway" class="doctor-profile-img"
+                        loading="lazy">
                     <div class="doctor-profile-overlay">
-                        <span class="badge bg-secondary-color text-white mb-2" style="width: fit-content;">Oculoplastic Specialist</span>
+                        <span class="badge bg-secondary-color text-white mb-2" style="width: fit-content;">Oculoplastic
+                            Specialist</span>
                         <h4 class="mb-0 text-white">Dr. Fiona Calloway, MD</h4>
                         <p class="mb-0 text-white-50">12 Years Experience | Eng, Port</p>
                         <div class="doctor-profile-details">
-                            <p class="text-white-50 small mb-2">Certifications: American Society of Ophthalmic Plastic Surgery.</p>
-                            <a href="dashboard.html" class="btn-primary-custom w-100 text-center" style="height: 44px; font-size: 0.85rem; border-radius: 22px;">Book Consultation</a>
+                            <p class="text-white-50 small mb-2">Certifications: American Society of Ophthalmic Plastic
+                                Surgery.</p>
+                            <a href="dashboard.html" class="btn-primary-custom w-100 text-center"
+                                style="height: 44px; font-size: 0.85rem; border-radius: 22px;">Book Consultation</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Dr. Evelyn Reyes -->
                 <div class="doctor-profile-card">
-                    <img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&w=600&q=80" onerror="handleImageError(this, 'doctor')" alt="Dr. Evelyn Reyes" class="doctor-profile-img" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&w=600&q=80"
+                        onerror="handleImageError(this, 'doctor')" alt="Dr. Evelyn Reyes" class="doctor-profile-img"
+                        loading="lazy">
                     <div class="doctor-profile-overlay">
-                        <span class="badge bg-secondary-color text-white mb-2" style="width: fit-content;">Pediatric Care Specialist</span>
+                        <span class="badge bg-secondary-color text-white mb-2" style="width: fit-content;">Pediatric
+                            Care Specialist</span>
                         <h4 class="mb-0 text-white">Dr. Evelyn Reyes, MD</h4>
                         <p class="mb-0 text-white-50">8 Years Experience | Eng, Span</p>
                         <div class="doctor-profile-details">
-                            <p class="text-white-50 small mb-2">Certifications: early-childhood amblyopia and vision therapies.</p>
-                            <a href="dashboard.html" class="btn-primary-custom w-100 text-center" style="height: 44px; font-size: 0.85rem; border-radius: 22px;">Book Consultation</a>
+                            <p class="text-white-50 small mb-2">Certifications: early-childhood amblyopia and vision
+                                therapies.</p>
+                            <a href="dashboard.html" class="btn-primary-custom w-100 text-center"
+                                style="height: 44px; font-size: 0.85rem; border-radius: 22px;">Book Consultation</a>
                         </div>
                     </div>
                 </div>
@@ -271,23 +301,30 @@
         <div class="container">
             <span class="section-tag d-block text-center">Refractor Experts</span>
             <h2 class="section-title text-center text-color">Our Optometrists</h2>
-            
+
             <div class="row g-4 justify-content-center" data-aos="fade-up">
-                
+
                 <!-- Dr. Raymond Vance -->
                 <div class="col-md-6 col-lg-5">
                     <div class="glass-panel p-4 h-100">
                         <div class="d-flex align-items-center gap-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" onerror="handleImageError(this, 'doctor')" alt="Dr. Raymond Vance" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80"
+                                onerror="handleImageError(this, 'doctor')" alt="Dr. Raymond Vance"
+                                class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;"
+                                loading="lazy">
                             <div>
                                 <h4 class="text-color mb-1">Dr. Raymond Vance, PhD</h4>
                                 <p class="text-secondary-color mb-0 small">8 Years Experience</p>
                             </div>
                         </div>
-                        <p class="text-muted small">Specializes in soft, rigid gas-permeable, and scleral lens fittings. National Board Certification.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-light">
+                        <p class="text-muted small">Specializes in soft, rigid gas-permeable, and scleral lens fittings.
+                            National Board Certification.</p>
+                        <div
+                            class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-light">
                             <span class="text-muted small">Languages: English</span>
-                            <a href="dashboard.html" class="btn-primary-custom text-center" style="height: 38px; padding: 0 1rem; border-radius: 19px; font-size: 0.8rem;">Book Appt</a>
+                            <a href="dashboard.html" class="btn-primary-custom text-center"
+                                style="height: 38px; padding: 0 1rem; border-radius: 19px; font-size: 0.8rem;">Book
+                                Appt</a>
                         </div>
                     </div>
                 </div>
@@ -296,16 +333,22 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="glass-panel p-4 h-100">
                         <div class="d-flex align-items-center gap-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" onerror="handleImageError(this, 'doctor')" alt="Dr. Marcus Lee" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80"
+                                onerror="handleImageError(this, 'doctor')" alt="Dr. Marcus Lee" class="rounded-circle"
+                                style="width: 80px; height: 80px; object-fit: cover;" loading="lazy">
                             <div>
                                 <h4 class="text-color mb-1">Dr. Marcus Lee, OD</h4>
                                 <p class="text-secondary-color mb-0 small">7 Years Experience</p>
                             </div>
                         </div>
-                        <p class="text-muted small">Specialized child developmental check-ups and custom tracking therapy charts. Pediatric Fellow.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-light">
+                        <p class="text-muted small">Specialized child developmental check-ups and custom tracking
+                            therapy charts. Pediatric Fellow.</p>
+                        <div
+                            class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-light">
                             <span class="text-muted small">Languages: Eng, Mand</span>
-                            <a href="dashboard.html" class="btn-primary-custom text-center" style="height: 38px; padding: 0 1rem; border-radius: 19px; font-size: 0.8rem;">Book Appt</a>
+                            <a href="dashboard.html" class="btn-primary-custom text-center"
+                                style="height: 38px; padding: 0 1rem; border-radius: 19px; font-size: 0.8rem;">Book
+                                Appt</a>
                         </div>
                     </div>
                 </div>
@@ -319,16 +362,20 @@
         <div class="container">
             <span class="section-tag d-block text-center">Clinical Operations</span>
             <h2 class="section-title text-center text-color">Clinical Support Team</h2>
-            
+
             <div class="row g-4 justify-content-center" data-aos="fade-up">
-                
+
                 <!-- Nurse Clara Oswald -->
                 <div class="col-md-6 col-lg-4">
                     <div class="glass-panel p-4 text-center">
-                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=300&q=80" onerror="handleImageError(this, 'doctor')" alt="Clara Oswald" class="rounded-circle mx-auto mb-3" style="width: 120px; height: 120px; object-fit: cover;" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=300&q=80"
+                            onerror="handleImageError(this, 'doctor')" alt="Clara Oswald"
+                            class="rounded-circle mx-auto mb-3" style="width: 120px; height: 120px; object-fit: cover;"
+                            loading="lazy">
                         <h5 class="text-color">Clara Oswald, COA</h5>
                         <p class="text-secondary-color mb-2 small">Lead Nurse Coordinator</p>
-                        <p class="text-muted small mb-3">9 Years Experience. Oversees patient diagnostics prep and posts-op recovery instructions.</p>
+                        <p class="text-muted small mb-3">9 Years Experience. Oversees patient diagnostics prep and
+                            posts-op recovery.</p>
                         <span class="badge bg-primary-color text-white">Certified Ophthalmic Assistant</span>
                     </div>
                 </div>
@@ -336,10 +383,14 @@
                 <!-- Technician Sean Miller -->
                 <div class="col-md-6 col-lg-4">
                     <div class="glass-panel p-4 text-center">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80" onerror="handleImageError(this, 'doctor')" alt="Sean Miller" class="rounded-circle mx-auto mb-3" style="width: 120px; height: 120px; object-fit: cover;" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80"
+                            onerror="handleImageError(this, 'doctor')" alt="Sean Miller"
+                            class="rounded-circle mx-auto mb-3" style="width: 120px; height: 120px; object-fit: cover;"
+                            loading="lazy">
                         <h5 class="text-color">Sean Miller, COT</h5>
                         <p class="text-secondary-color mb-2 small">Ophthalmic Lead Technician</p>
-                        <p class="text-muted small mb-3">6 Years Experience. Operates wavefront scanners and retinal mapping instruments.</p>
+                        <p class="text-muted small mb-3">6 Years Experience. Operates wavefront scanners and retinal
+                            mapping instruments.</p>
                         <span class="badge bg-primary-color text-white">Certified Ophthalmic Tech</span>
                     </div>
                 </div>
@@ -353,7 +404,7 @@
         <div class="container">
             <span class="section-tag d-block text-center">Academic Contributions</span>
             <h2 class="section-title text-center text-color">Research & Accreditations</h2>
-            
+
             <div class="row g-4 mt-2 justify-content-center">
                 <!-- Research Paper 1 -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -363,10 +414,14 @@
                             <span class="text-muted small">2026</span>
                         </div>
                         <h5 class="text-color fw-bold mb-2">AI-Driven OCT Analysis for Early Myopic Shifts</h5>
-                        <p class="text-muted small mb-4">Co-authored by Dr. Raymond Vance, PhD. Published in the <i>Global Journal of Ophthalmic Research</i>, detailing automated retinal layer measurement without standard dilation drops.</p>
-                        <div class="mt-auto pt-3 border-top border-light d-flex justify-content-between align-items-center">
+                        <p class="text-muted small mb-4">Co-authored by Dr. Raymond Vance, PhD. Published in the
+                            <i>Global Journal of Ophthalmic Research</i>, detailing automated retinal layer measurement
+                            without standard dilation drops.</p>
+                        <div
+                            class="mt-auto pt-3 border-top border-light d-flex justify-content-between align-items-center">
                             <span class="text-secondary-color small fw-semibold">JAMA Ophthalmology</span>
-                            <a href="#" class="text-color small text-decoration-none hover-underline"><i data-lucide="external-link" class="icon-size-sm"></i> Read Paper</a>
+                            <a href="#" class="text-color small text-decoration-none hover-underline"><i
+                                    data-lucide="external-link" class="icon-size-sm"></i> Read Paper</a>
                         </div>
                     </div>
                 </div>
@@ -379,10 +434,14 @@
                             <span class="text-muted small">2025</span>
                         </div>
                         <h5 class="text-color fw-bold mb-2">Femtosecond Flap Stability Under Corneal Stress</h5>
-                        <p class="text-muted small mb-4">Lead researcher Dr. Michael Vance, MD. Outlining procedural micro-complications tracking across 1,200 LASIK procedures, validating micron precision safety metrics.</p>
-                        <div class="mt-auto pt-3 border-top border-light d-flex justify-content-between align-items-center">
+                        <p class="text-muted small mb-4">Lead researcher Dr. Michael Vance, MD. Outlining procedural
+                            micro-complications tracking across 1,200 LASIK procedures, validating micron precision
+                            safety metrics.</p>
+                        <div
+                            class="mt-auto pt-3 border-top border-light d-flex justify-content-between align-items-center">
                             <span class="text-secondary-color small fw-semibold">World Cornea Congress</span>
-                            <a href="#" class="text-color small text-decoration-none hover-underline"><i data-lucide="external-link" class="icon-size-sm"></i> Read Abstract</a>
+                            <a href="#" class="text-color small text-decoration-none hover-underline"><i
+                                    data-lucide="external-link" class="icon-size-sm"></i> Read Abstract</a>
                         </div>
                     </div>
                 </div>
@@ -395,23 +454,31 @@
                             <span class="text-muted small">2025</span>
                         </div>
                         <h5 class="text-color fw-bold mb-2">LipiFlow Meibomian Clearance and Tear Film Quality</h5>
-                        <p class="text-muted small mb-4">Investigator Dr. Fiona Calloway, MD. Evaluating long-term meibomian gland function and lipid layer thickness improvement tracking following high-frequency thermal pulsation.</p>
-                        <div class="mt-auto pt-3 border-top border-light d-flex justify-content-between align-items-center">
+                        <p class="text-muted small mb-4">Investigator Dr. Fiona Calloway, MD. Evaluating long-term
+                            meibomian gland function and lipid layer thickness improvement tracking following
+                            high-frequency thermal pulsation.</p>
+                        <div
+                            class="mt-auto pt-3 border-top border-light d-flex justify-content-between align-items-center">
                             <span class="text-secondary-color small fw-semibold">Dry Eye Society</span>
-                            <a href="#" class="text-color small text-decoration-none hover-underline"><i data-lucide="external-link" class="icon-size-sm"></i> Read Research</a>
+                            <a href="#" class="text-color small text-decoration-none hover-underline"><i
+                                    data-lucide="external-link" class="icon-size-sm"></i> Read Research</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Affiliation Badges -->
             <div class="row mt-5 pt-4 border-top border-light justify-content-center text-center">
                 <div class="col-12">
-                    <p class="text-muted small mb-3">Our clinic is certified and affiliated with international ophthalmic boards:</p>
+                    <p class="text-muted small mb-3">Our clinic is certified and affiliated with international
+                        ophthalmic boards:</p>
                     <div class="d-flex flex-wrap justify-content-center gap-4 align-items-center opacity-75">
-                        <span class="badge bg-secondary-color text-white px-3 py-2 fs-7">ISO 9001:2015 Ophthalmic Care</span>
-                        <span class="badge bg-secondary-color text-white px-3 py-2 fs-7">Fellow American Academy of Ophthalmology (FAAO)</span>
-                        <span class="badge bg-secondary-color text-white px-3 py-2 fs-7">European Society of Cataract & Refractive Surgeons</span>
+                        <span class="badge bg-secondary-color text-white px-3 py-2 fs-7">ISO 9001:2015 Ophthalmic
+                            Care</span>
+                        <span class="badge bg-secondary-color text-white px-3 py-2 fs-7">Fellow American Academy of
+                            Ophthalmology (FAAO)</span>
+                        <span class="badge bg-secondary-color text-white px-3 py-2 fs-7">European Society of Cataract &
+                            Refractive Surgeons</span>
                     </div>
                 </div>
             </div>
@@ -497,7 +564,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Custom theme script -->
     <script src="js/theme.js"></script>
-    
+
     <script>
         AOS.init({
             once: true,
@@ -505,4 +572,5 @@
         });
     </script>
 </body>
+
 </html>
