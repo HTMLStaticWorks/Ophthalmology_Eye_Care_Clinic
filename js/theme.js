@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    initScrollToTop();
     initThemeAndRTL();
     initStickyNavbar();
     initMobileNav();
@@ -131,4 +132,31 @@ function initMobileNav() {
             }
         });
     }
+}
+
+function initScrollToTop() {
+    // Create button element
+    const scrollBtn = document.createElement('button');
+    scrollBtn.className = 'scroll-to-top';
+    scrollBtn.setAttribute('aria-label', 'Scroll to Top');
+    scrollBtn.innerHTML = '<i data-lucide="arrow-up"></i>';
+    
+    document.body.appendChild(scrollBtn);
+
+    // Scroll listener to toggle visibility
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+
+    // Click listener to scroll to top
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }
