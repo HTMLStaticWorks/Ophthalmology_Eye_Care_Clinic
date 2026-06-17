@@ -1358,9 +1358,9 @@ body.signup-page-body .auth-card {
     margin: auto 0 !important;
 }
 
-/* Default absolute styling for auth-toggles */
+/* Default fixed styling for auth-toggles */
 .auth-toggles {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
