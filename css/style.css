@@ -1240,17 +1240,17 @@ textarea.form-control-custom {
 
 /* Research section grid layout for tablet and desktop views */
 @media (min-width: 768px) {
-    .research-publications-section .row {
+    .publications-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
         gap: 24px;
     }
-    .research-publications-section .row::before,
-    .research-publications-section .row::after {
+    .publications-grid::before,
+    .publications-grid::after {
         display: none !important;
     }
-    .research-publications-section .row > div {
+    .publications-grid > div {
         width: 100% !important;
         max-width: 100% !important;
         margin-top: 0 !important;
@@ -1259,7 +1259,7 @@ textarea.form-control-custom {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     /* Center 3rd research card in tablet view and make it 50% width */
-    .research-publications-section .row > div:nth-child(3) {
+    .publications-grid > div:nth-child(3) {
         grid-column: 1 / span 2;
         justify-self: center;
         width: calc(50% - 12px) !important;
@@ -1278,10 +1278,10 @@ textarea.form-control-custom {
 }
 
 @media (min-width: 992px) {
-    .research-publications-section .row {
+    .publications-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .research-publications-section .row > div:nth-child(3) {
+    .publications-grid > div:nth-child(3) {
         grid-column: auto;
         justify-self: stretch;
         width: 100% !important;
@@ -1312,11 +1312,3 @@ textarea.form-control-custom {
     color: #111111 !important; /* Pure high contrast text */
 }
 
-/* Keep affiliation badges and text centered in all states and directions */
-.research-publications-section .row.mt-5,
-.research-publications-section .row.mt-5 .col-12,
-.research-publications-section .row.mt-5 p,
-.research-publications-section .row.mt-5 .d-flex {
-    text-align: center !important;
-    justify-content: center !important;
-}
